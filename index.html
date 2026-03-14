@@ -8,338 +8,144 @@
 <title>AnishS | Video Editor</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;scroll-behavior:smooth}
+body{background:#0b0b0b;color:white;line-height:1.6}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
-}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:#0f0f0f;position:sticky;top:0;z-index:100}
+nav h2{color:#00ffd5}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:white;text-decoration:none;font-size:14px;transition:.3s}
+nav a:hover{color:#00ffd5}
 
-body{
-background:#0b0b0b;
-color:white;
-line-height:1.6;
-}
+.hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(120deg,#0f2027,#203a43,#2c5364)}
+.hero h1{font-size:60px;color:#00ffd5;text-shadow:0 0 20px #00ffd5}
+.hero p{max-width:650px;margin-top:20px;opacity:.85}
+.hero button{margin-top:30px;padding:15px 35px;border:none;background:#00ffd5;color:black;font-weight:600;border-radius:8px;cursor:pointer;transition:.3s}
+.hero button:hover{transform:scale(1.08);box-shadow:0 0 15px #00ffd5}
 
-/* NAVBAR */
+section{padding:80px 10%}
+h2{text-align:center;margin-bottom:50px;font-size:36px}
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#0f0f0f;
-position:sticky;
-top:0;
-}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:#121212;padding:30px;border-radius:12px;border:1px solid #222;transition:.35s}
+.card:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 0 25px #00ffd5}
 
-nav h2{
-color:#00ffd5;
-}
+.portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
+.video{border-radius:10px;overflow:hidden;border:1px solid #222;transition:.3s}
+.video:hover{transform:scale(1.04);box-shadow:0 0 20px #00ffd5}
+.video iframe{width:100%;height:200px}
 
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
+.skills{display:flex;flex-wrap:wrap;justify-content:center;gap:15px}
+.skill{background:#121212;padding:10px 20px;border-radius:20px;border:1px solid #333;transition:.3s}
+.skill:hover{background:#00ffd5;color:black}
 
-nav a{
-color:white;
-text-decoration:none;
-font-size:14px;
-}
+.tools{display:flex;flex-wrap:wrap;justify-content:center;gap:15px}
+.tool{background:#121212;padding:10px 20px;border-radius:20px;border:1px solid #333}
 
-nav a:hover{
-color:#00ffd5;
-}
+.reel{max-width:900px;margin:auto;border-radius:10px;overflow:hidden;border:1px solid #222}
+.reel iframe{width:100%;height:450px}
 
-/* HERO */
+footer{text-align:center;padding:30px;background:#0f0f0f;opacity:.7}
 
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
-}
-
-.hero h1{
-font-size:60px;
-color:#00ffd5;
-text-shadow:0 0 20px #00ffd5;
-}
-
-.hero p{
-max-width:600px;
-margin-top:20px;
-opacity:.85;
-}
-
-.hero button{
-margin-top:30px;
-padding:15px 35px;
-border:none;
-background:#00ffd5;
-color:black;
-font-weight:600;
-border-radius:8px;
-cursor:pointer;
-}
-
-.hero button:hover{
-transform:scale(1.08);
-}
-
-/* SECTIONS */
-
-section{
-padding:80px 10%;
-}
-
-h2{
-text-align:center;
-margin-bottom:50px;
-font-size:36px;
-}
-
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#121212;
-padding:30px;
-border-radius:12px;
-border:1px solid #222;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px #00ffd5;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-}
-
-.video{
-border-radius:10px;
-overflow:hidden;
-border:1px solid #222;
-}
-
-.video iframe{
-width:100%;
-height:200px;
-}
-
-/* SKILLS */
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.skill{
-background:#121212;
-padding:10px 20px;
-border-radius:20px;
-border:1px solid #333;
-}
-
-/* CONTACT */
-
-.contact{
-max-width:600px;
-margin:auto;
-}
-
-input,textarea{
-width:100%;
-padding:15px;
-margin-top:10px;
-background:#121212;
-border:1px solid #333;
-color:white;
-border-radius:6px;
-}
-
-textarea{
-height:120px;
-}
-
-.contact button{
-margin-top:15px;
-padding:15px;
-background:#00ffd5;
-border:none;
-color:black;
-font-weight:600;
-cursor:pointer;
-width:100%;
-border-radius:6px;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-background:#0f0f0f;
-opacity:.7;
-}
-
+.socials{margin-top:15px}
+.socials a{color:#00ffd5;margin:0 10px;text-decoration:none}
 </style>
 </head>
 
 <body>
 
-<nav>
-
+<nav data-aos="fade-down">
 <h2>AnishS</h2>
-
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <div class="hero">
-
-<h1>Professional Video Editor</h1>
-
-<p>
-I create engaging short-form and long-form videos for YouTube, TikTok, and Instagram using modern trends, captions, and storytelling techniques.
-</p>
-
-<a href="https://AnishSfiverr.com/">
-<button>Hire Me on Fiverr</button>
-</a>
-
+<h1 data-aos="zoom-in">High‑Retention Video Editor</h1>
+<p data-aos="fade-up">I help YouTubers, influencers, and brands turn raw footage into engaging videos with captions, pacing, and storytelling optimized for audience retention.</p>
+<a href="https://www.fiverr.com/s/Ayryg7P" data-aos="fade-up"><button>Hire Me on Fiverr</button></a>
 </div>
 
+<section>
+<h2 data-aos="fade-up">Showreel</h2>
+<div class="reel" data-aos="zoom-in">
+<iframe src="https://www.youtube.com/embed/YOUR_SHOWREEL_VIDEO"></iframe>
+</div>
+</section>
+
 <section id="about">
-
-<h2>About Me</h2>
-
-<p style="max-width:700px;margin:auto;text-align:center;">
-I'm Anish, a video editor specializing in social media content. I help creators turn raw footage into engaging videos with captions, transitions, and high-retention editing styles.
-</p>
-
+<h2 data-aos="fade-up">About Me</h2>
+<p data-aos="fade-up" style="max-width:700px;margin:auto;text-align:center">I'm Anish, a video editor specializing in short‑form and YouTube content. I create fast‑paced edits, captions, and visual storytelling that keep viewers watching longer.</p>
 </section>
 
 <section id="services">
-
-<h2>Services</h2>
-
+<h2 data-aos="fade-up">Services</h2>
 <div class="services">
-
-<div class="card">
-<h3>Short Form Editing</h3>
-<p>TikTok, Reels, and YouTube Shorts with captions and fast pacing.</p>
+<div class="card" data-aos="zoom-in"><h3>Short Form Editing</h3><p>TikTok, Reels, and Shorts optimized for retention.</p></div>
+<div class="card" data-aos="zoom-in"><h3>YouTube Editing</h3><p>Long‑form storytelling with smooth pacing.</p></div>
+<div class="card" data-aos="zoom-in"><h3>Captions & Motion</h3><p>Dynamic captions and engaging visuals.</p></div>
+<div class="card" data-aos="zoom-in"><h3>Content Strategy</h3><p>Advice on format, pacing and audience growth.</p></div>
 </div>
-
-<div class="card">
-<h3>YouTube Video Editing</h3>
-<p>Professional long-form editing with storytelling and smooth cuts.</p>
-</div>
-
-<div class="card">
-<h3>Custom Intros & Outros</h3>
-<p>Branded intros and outros to make your videos stand out.</p>
-</div>
-
-<div class="card">
-<h3>Content Strategy</h3>
-<p>Guidance on niche selection and audience targeting.</p>
-</div>
-
-</div>
-
 </section>
 
 <section>
-
-<h2>Skills</h2>
-
+<h2 data-aos="fade-up">Skills</h2>
 <div class="skills">
-
-<div class="skill">Video Editing</div>
-<div class="skill">Short Form Content</div>
-<div class="skill">YouTube Editing</div>
-<div class="skill">Captions</div>
-<div class="skill">Transitions</div>
-<div class="skill">Color Correction</div>
-
+<div class="skill" data-aos="fade-up">Video Editing</div>
+<div class="skill" data-aos="fade-up">Short Form Content</div>
+<div class="skill" data-aos="fade-up">YouTube Editing</div>
+<div class="skill" data-aos="fade-up">Captions</div>
+<div class="skill" data-aos="fade-up">Transitions</div>
+<div class="skill" data-aos="fade-up">Color Correction</div>
 </div>
+</section>
 
+<section>
+<h2 data-aos="fade-up">Tools I Use</h2>
+<div class="tools">
+<div class="tool">Premiere Pro</div>
+<div class="tool">After Effects</div>
+<div class="tool">CapCut</div>
+<div class="tool">DaVinci Resolve</div>
+</div>
 </section>
 
 <section id="portfolio">
-
-<h2>Portfolio</h2>
-
+<h2 data-aos="fade-up">Portfolio</h2>
 <div class="portfolio">
-
-<div class="video">
-<iframe src="YOUR_VIDEO_LINK"></iframe>
+<div class="video" data-aos="zoom-in"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_1"></iframe></div>
+<div class="video" data-aos="zoom-in"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_2"></iframe></div>
+<div class="video" data-aos="zoom-in"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_3"></iframe></div>
 </div>
-
-<div class="video">
-<iframe src="YOUR_VIDEO_LINK"></iframe>
-</div>
-
-<div class="video">
-<iframe src="YOUR_VIDEO_LINK"></iframe>
-</div>
-
-</div>
-
 </section>
 
 <section id="contact">
-
-<h2>Contact</h2>
-
-<div style="text-align:center;font-size:18px;line-height:2;">
-
-<p>📧 Email: sinha.anish008@email.com</p>
-
-
-
-<p style="opacity:.8;">
-Feel free to contact me for collaborations, freelance projects, or video editing services.
-</p>
-
+<h2 data-aos="fade-up">Contact</h2>
+<div style="text-align:center;font-size:18px;line-height:2" data-aos="fade-up">
+<p>Email: <a href="mailto:sinha.anish008@email.com" style="color:#00ffd5">sinha.anish008@email.com</a></p>
+<p>Available for freelance video editing projects and collaborations.</p>
+<div class="socials">
+<a href="https://www.youtube.com">YouTube</a>
+<a href="https://www.fiverr.com/s/Ayryg7P">Fiverr</a>
 </div>
-
+</div>
 </section>
 
 <footer>
-
 <p>© 2026 AnishS | Video Editing Portfolio</p>
-
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000,once:false,mirror:true});
+</script>
 
 </body>
 </html>
